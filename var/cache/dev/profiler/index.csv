@@ -28,3 +28,7 @@ c97477,185.199.110.133,GET,http://localhost:8000/home,1761391611,,500,request
 39aeff,185.199.110.133,GET,http://localhost:8000/home,1761391691,d4c035,500,request
 d4c035,185.199.110.133,GET,http://localhost:8000/home,1761391691,,500,request
 3c1a72,185.199.110.133,GET,http://localhost:8000/home,1761391898,,200,request
+4fc556,185.199.110.133,GET,http://localhost:8000/helloUser/zaki,1761393051,0ab675,404,request
+0ab675,185.199.110.133,GET,http://localhost:8000/helloUser/zaki,1761393051,,404,request
+490ba0,185.199.110.133,GET,http://localhost:8000/hello/zaki,1761393074,,200,request
+1d24c7,185.199.110.133,GET,http://localhost:8000/hello/hitler,1761393227,,200,request

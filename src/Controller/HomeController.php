@@ -15,4 +15,8 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/hello/{name}', name: 'app_hello')]
+    public function helloUser($name){
+        return new Response("Hello $name");
+    }
 }
