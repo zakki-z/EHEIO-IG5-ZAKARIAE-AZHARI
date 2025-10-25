@@ -14,31 +14,31 @@ services:
     networks:
       - eheio-network
 
-
   db:
-    image: mysql
-    healthcheck:
-            test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
-            interval: 5s
-            retries: 5
+    image: postgres:16
+    container_name: postgres_db
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: eheio_db
-      MYSQL_USER: eheio
-      MYSQL_PASSWORD: eheio
+      POSTGRES_DB: eheio_db
+      POSTGRES_USER: zakiazhari
+      POSTGRES_PASSWORD: zaki
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - db_data:/var/lib/mysql
-      - ./docker/db/mariadb/my.cnf:/etc/mysql/conf.d/my.cnf
+      - db_data:/var/lib/postgresql/data
+      - ./docker/db/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eheio"]
+      interval: 5s
+      retries: 5
     networks:
       - eheio-network
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
     environment:
-      PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: root
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "8081:80"
     depends_on:
