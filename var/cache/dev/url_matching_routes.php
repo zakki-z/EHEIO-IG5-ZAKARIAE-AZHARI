@@ -15,6 +15,7 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/dummy' => [[['_route' => 'app_dummy', '_controller' => 'App\\Controller\\DummyController::index'], null, null, null, false, false, null]],
+        '/dummy/home' => [[['_route' => 'app_home_dummy', '_controller' => 'App\\Controller\\DummyController::home'], null, null, null, false, false, null]],
         '/add-book' => [[['_route' => 'app_book_add', '_controller' => 'App\\Controller\\DummyController::book'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'app_user', '_controller' => 'App\\Controller\\UserController::index'], null, null, null, false, false, null]],
         '/add-user' => [[['_route' => 'app_user_add', '_controller' => 'App\\Controller\\UserController::addUser'], null, null, null, false, false, null]],

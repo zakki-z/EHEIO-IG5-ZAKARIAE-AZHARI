@@ -17,7 +17,7 @@ class DummyController extends AbstractController
             'controller_name' => 'DummyController',
         ]);
     }
-    #[Route(path: '/home', name: 'app_home')]
+    #[Route(path: '/dummy/home', name: 'app_home_dummy')]
     public function home(): Response
     {
     $text = "Hello This is home !";

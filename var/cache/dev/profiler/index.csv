@@ -105,3 +105,7 @@ b56c8f,185.199.110.133,GET,http://localhost:8000/add-book,1768688012,,500,reques
 580237,185.199.110.133,GET,http://localhost:8000/add-book,1768688312,520590,500,request
 520590,185.199.110.133,GET,http://localhost:8000/add-book,1768688312,,500,request
 387fc7,185.199.110.133,GET,http://localhost:8000/add-book,1768688339,,200,request
+be6f80,185.199.110.133,GET,http://localhost:8000/,1768689440,,404,request
+cb079d,185.199.110.133,GET,http://localhost:8000/home,1768689440,,200,request
+da37f4,185.199.110.133,GET,http://localhost:8000/dummy/home,1768689474,739b2e,500,request
+739b2e,185.199.110.133,GET,http://localhost:8000/dummy/home,1768689474,,500,request

@@ -17,7 +17,7 @@ class Book
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $authour = null;
+    private ?string $author = null;
 
     #[ORM\Column]
     private ?int $year = null;
@@ -39,14 +39,14 @@ class Book
         return $this;
     }
 
-    public function getAuthour(): ?string
+    public function getAuthor(): ?string
     {
-        return $this->authour;
+        return $this->author;
     }
 
-    public function setAuthour(string $authour): static
+    public function setAuthor(string $author): static
     {
-        $this->authour = $authour;
+        $this->author = $author;
 
         return $this;
     }
