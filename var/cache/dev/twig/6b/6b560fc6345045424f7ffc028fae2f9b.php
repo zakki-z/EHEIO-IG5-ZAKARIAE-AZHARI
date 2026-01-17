@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* home/index.html.twig */
-class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
+/* dummy/index.html.twig */
+class __TwigTemplate_fe00aac26fc0ec3c5b4e2d3da4efa1d3 extends Template
 {
     private $source;
     private $macros = [];
@@ -41,12 +41,12 @@ class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/index.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dummy/index.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/index.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dummy/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "dummy/index.html.twig", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -66,7 +66,7 @@ class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello HomeController!";
+        yield "Hello DummyController!";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -91,12 +91,15 @@ class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-    ";
+";
         // line 10
         yield Twig\Extension\CoreExtension::include($this->env, $context, "partials/_navbar.html.twig");
         yield "
-
 <div class=\"example-wrapper\">
+    ";
+        // line 12
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["bookForm"]) || array_key_exists("bookForm", $context) ? $context["bookForm"] : (function () { throw new RuntimeError('Variable "bookForm" does not exist.', 12, $this->source); })()), 'form');
+        yield "
 </div>
 ";
         
@@ -113,7 +116,7 @@ class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
      */
     public function getTemplateName()
     {
-        return "home/index.html.twig";
+        return "dummy/index.html.twig";
     }
 
     /**
@@ -129,25 +132,25 @@ class __TwigTemplate_5860308c2d62fc12eaa0300990974a5c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  96 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  101 => 12,  96 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello DummyController!{% endblock %}
 
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-    {{ include('partials/_navbar.html.twig') }}
-
+{{ include('partials/_navbar.html.twig') }}
 <div class=\"example-wrapper\">
+    {{ form(bookForm) }}
 </div>
 {% endblock %}
-", "home/index.html.twig", "/var/www/html/templates/home/index.html.twig");
+", "dummy/index.html.twig", "/var/www/html/templates/dummy/index.html.twig");
     }
 }
