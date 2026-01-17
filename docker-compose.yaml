@@ -18,9 +18,9 @@ services:
     image: postgres:16
     container_name: postgres_db
     environment:
-      POSTGRES_DB: eheio_db
-      POSTGRES_USER: zakiazhari
-      POSTGRES_PASSWORD: zaki
+      POSTGRES_DB: #changeME
+      POSTGRES_USER: #changeME
+      POSTGRES_PASSWORD: #changeME
     ports:
       - "5432:5432"
     volumes:
