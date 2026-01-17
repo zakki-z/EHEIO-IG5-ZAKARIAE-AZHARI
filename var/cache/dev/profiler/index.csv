@@ -129,3 +129,5 @@ bdd139,185.199.110.133,GET,http://localhost:8000/about,1768692279,,200,request
 0e2b99,185.199.110.133,GET,http://localhost:8000/news,1768692327,,200,request
 afd238,185.199.110.133,GET,http://localhost:8000/contact,1768692329,,200,request
 654dad,185.199.110.133,GET,http://localhost:8000/about,1768692330,,200,request
+ae131f,185.199.110.133,GET,http://localhost:8000/dummy/home,1768692597,3396a0,404,request
+3396a0,185.199.110.133,GET,http://localhost:8000/dummy/home,1768692597,,404,request
