@@ -94,3 +94,14 @@ a88e99,192.168.65.1,GET,http://localhost:8000/add-user,1763921047,37919c,500,req
 fcac2c,192.168.65.1,GET,http://localhost:8000/add-user,1763921205,834848,500,request
 834848,192.168.65.1,GET,http://localhost:8000/add-user,1763921205,,500,request
 7ffe27,192.168.65.1,GET,http://localhost:8000/add-user,1763921218,,200,request
+060b04,185.199.110.133,GET,http://localhost:8000/home,1768686722,,200,request
+036281,185.199.110.133,GET,http://localhost:8000/product,1768686732,d2c9a1,404,request
+d2c9a1,185.199.110.133,GET,http://localhost:8000/product,1768686732,,404,request
+0f5724,185.199.110.133,GET,http://localhost:8000/user,1768686743,2c6ba4,500,request
+2c6ba4,185.199.110.133,GET,http://localhost:8000/user,1768686743,,500,request
+eb5992,185.199.110.133,GET,http://localhost:8000/add-user,1768688011,,200,request
+cee56a,185.199.110.133,GET,http://localhost:8000/add-book,1768688012,b56c8f,500,request
+b56c8f,185.199.110.133,GET,http://localhost:8000/add-book,1768688012,,500,request
+580237,185.199.110.133,GET,http://localhost:8000/add-book,1768688312,520590,500,request
+520590,185.199.110.133,GET,http://localhost:8000/add-book,1768688312,,500,request
+387fc7,185.199.110.133,GET,http://localhost:8000/add-book,1768688339,,200,request
