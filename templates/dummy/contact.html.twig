@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Contact Us{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .contact-info {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .contact-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="content-box">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    {{ contactInfo.email }}
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong>
+                    {{ contactInfo.phone }}
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong>
+                    {{ contactInfo.address }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

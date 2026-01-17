@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - News{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .news-item {
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <div class="content-box">
+            <h2>Latest Articles</h2>
+            {% for article in articles %}
+                <div class="news-item">
+                    <strong>Article {{ loop.index }}:</strong> {{ article }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

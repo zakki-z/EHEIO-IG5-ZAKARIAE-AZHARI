@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - About Us{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        // Example of overriding JavaScript block
+        console.log('About page loaded');
+    </script>
+{% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="content-box">
+            <p>{{ aboutText }}</p>
+            
+            <h2 style="margin-top: 30px;">Our Team</h2>
+            <ul class="list-styled">
+                {% for member in team %}
+                    <li>Team Member: {{ member }}</li>
+                {% endfor %}
+            </ul>
+            
+            {# Example of Twig comment - this won't be visible in the output #}
+            {# This is a comment in Twig - it will not appear in HTML #}
+        </div>
+    </div>
+{% endblock %}
